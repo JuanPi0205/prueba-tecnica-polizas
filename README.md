@@ -142,8 +142,6 @@ curl -X GET http://localhost:8080/api/v1/polizas/1 \
   -H "x-api-key: 123456"
 ```
 
-![img.png](img.png)
-
 ---
 
 ## 📡 Endpoints de la API
