@@ -66,8 +66,8 @@ Sigue los pasos en orden para levantar el entorno completo.
 ### Paso 1 — Clonar el repositorio
 
 ```bash
-git clone <URL_DE_TU_REPOSITORIO>
-cd <NOMBRE_DE_LA_CARPETA>
+git clone https://github.com/JuanPi0205/prueba-tecnica-polizas.git
+cd prueba-tecnica-polizas
 ```
 
 ---
