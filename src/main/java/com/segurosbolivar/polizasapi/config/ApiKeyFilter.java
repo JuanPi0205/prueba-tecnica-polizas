@@ -19,7 +19,7 @@ public class ApiKeyFilter extends  OncePerRequestFilter {
     protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain)
             throws ServletException, IOException {
 
-        // Excluimos la ruta del mock para que el mismo servidor pueda consumirla sin problemas
+        
         if (request.getRequestURI().startsWith("/core-mock")) {
             filterChain.doFilter(request, response);
             return;
@@ -28,10 +28,10 @@ public class ApiKeyFilter extends  OncePerRequestFilter {
         String apiKey = request.getHeader(API_KEY_HEADER);
 
         if (API_KEY_VALUE.equals(apiKey)) {
-            // Si el token es válido, continúa el flujo normal
+            
             filterChain.doFilter(request, response);
         } else {
-            // Si no es válido o no viene, devolvemos un 401 Unauthorized
+            
             response.setStatus(HttpServletResponse.SC_UNAUTHORIZED);
             response.getWriter().write("Acceso denegado. Header x-api-key invalido o ausente.");
         }
